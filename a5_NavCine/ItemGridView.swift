@@ -8,38 +8,21 @@
 import SwiftUI
 
 struct ItemGridView: View {
-    let columns = [GridItem(.flexible()), GridItem(.flexible())]
-    var item: String = "palomitas"
-    var itemText: String = "Palomitas"
+    var item: String
+    var itemText: String
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns) {
-                VStack{
-                    HStack {
-                        ZStack{
-                            Image(item)
-                                .resizable()
-                                .frame(width: 120, height: 120)
-                            
-                            Text(itemText).font(.title)
-                        }.background(LinearGradient(gradient: Gradient(colors: [.white, .blue]), startPoint: .topTrailing, endPoint: .bottomLeading))
-                        
-                        ZStack{
-                            Image(item)
-                                .resizable()
-                                .frame(width: 120, height: 120)
-                            
-                            Text(itemText).font(.title)
-                        }.background(LinearGradient(gradient: Gradient(colors: [.white, .orange]), startPoint: .topTrailing, endPoint: .bottomLeading))
-                        
-                    }
-                }
-            }
+        
+        ZStack{
+            Image(item)
+                .resizable()
+                .frame(width: 180, height: 280)
+            
+            Text(itemText.uppercased()).font(.system(size: 30, weight: .bold, design: .default)).foregroundColor(.white)
         }
     }
 }
 
 #Preview {
-    ItemGridView()
+    ItemGridView(item: "palomitas", itemText: "palomitas")
 }
