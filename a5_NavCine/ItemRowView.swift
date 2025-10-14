@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ItemRowView: View {
     
-    var item: String = "palomitas"
-    var itemText: String = "Palomitas"
-    var price: String = "$1.00 MXN"
+    var item: String
+    var itemText: String
+    var price: String
     
     var body: some View {
-        HStack {
+        VStack {
             Image(item)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -28,8 +28,6 @@ struct ItemRowView: View {
     }
 }
 
-struct ItemRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        ItemRowView()
-    }
+#Preview {
+    ItemRowView(item: "", itemText: "", price: "")
 }

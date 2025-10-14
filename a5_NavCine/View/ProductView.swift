@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct ProductView: View {
+    @State var selectedProduct: Int?
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .trailing){
+            if selectedProduct == 1 {
+                Text("Combos Disponibles")
+                HStack{
+                    ZStack{
+                        ItemRowView(item: "combo1", itemText: "Combo Pareja", price: "$250 MXN")
+                    }.background(Color.gray)
+                        .cornerRadius(10)
+                }
+            }
+            if selectedProduct == 2 {
+                ZStack{
+                    ItemRowView(item: "pop1", itemText: "Palomitas", price: "$250 MXN")
+                }.background(LinearGradient(gradient: Gradient(colors: [.teal,.pink]), startPoint: .topTrailing, endPoint: .bottomLeading))
+                    .cornerRadius(10)
+            }
+        }
     }
 }
 

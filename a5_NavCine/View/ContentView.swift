@@ -9,24 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ScrollView {
-            VStack{
-                Text("Bienvenid@ a Dulcería Cinépolis").font(.title)
-                HStack {
-                    NavigationStack{
-                        NavigationLink(destination: ItemDetailsView(item: "palomitas",name: "MacBook Pro De 13,6'' Chip M2 512 Gb Ssd Gris Espacial - Distribuidor autorizado", price: 15498)){
+        NavigationStack{
+            ScrollView {
+                VStack{
+                    Text("Bienvenid@ a Dulcería Cinépolis").font(.title)
+                    HStack {
+                        
+                        NavigationLink(destination: ProductView(selectedProduct: 1)){
                             ZStack{
                                 ItemGridView(item: "combos", itemText: "Combos")
                             }.background(LinearGradient(gradient: Gradient(colors: [.teal,.pink]), startPoint: .topTrailing, endPoint: .bottomLeading))
                                 .cornerRadius(10)
-                                
-                            }
                         }
-                    
-                    
-                    ZStack{
-                        ItemGridView(item: "palomitas", itemText: "Palomitas")
-                    }.background(LinearGradient(gradient: Gradient(colors: [.purple, .blue]), startPoint: .topTrailing, endPoint: .bottomLeading)).cornerRadius(10)
+                        
+                        NavigationLink(destination: ProductView(selectedProduct: 2)){
+                            ZStack{
+                                ItemGridView(item: "palomitas", itemText: "Palomitas")
+                            }.background(LinearGradient(gradient: Gradient(colors: [.purple, .blue]), startPoint: .topTrailing, endPoint: .bottomLeading)).cornerRadius(10)
+                        }
+                    }
                 }
                 HStack {
                     ZStack{
