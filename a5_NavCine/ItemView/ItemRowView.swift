@@ -17,8 +17,9 @@ struct ItemRowView: View {
         VStack {
             Image(item)
                 .resizable()
+                
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 120, height: 120)
+                .frame(width: 150, height: 150)
             
             VStack(alignment: .leading){
                 Text(itemText).font(.title)
