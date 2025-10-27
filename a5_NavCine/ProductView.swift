@@ -48,92 +48,108 @@ struct ProductView: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            // Sección 'combos'
+            
+            // SECCIÓN 'combos'
             if selectedProduct == 1 {
-                Text("Combos Disponibles")
-                    .font(.title).fontWeight(.bold)
-                ScrollView(.horizontal) {
-                    HStack{
-                        ZStack{
-                            ItemRowView(item: "combo1", itemText: "Combo Pareja", price: "$250 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
-                        
-                        ZStack{
-                            ItemRowView(item: "combo2", itemText: "Combo ICEE", price: "$250 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
-                        
-                        ZStack{
-                            ItemRowView(item: "combo3", itemText: "Combo Nachos", price: "$250 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
+                VStack (alignment: .leading){
+                    Text("Combos Disponibles")
+                        .font(.title).fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                    
+                    ScrollView(.horizontal) {
+                        HStack{
+                            ZStack{
+                                ItemRowView(item: "combo1", itemText: "Combo Nachos en Pareja", price: "$270 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.cine)
+                                .cornerRadius(10)
                             
+                            ZStack{
+                                ItemRowView(item: "combo2", itemText: "Combo ICEE", price: "$286 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.cine)
+                                .cornerRadius(10)
+                            
+                            ZStack{
+                                ItemRowView(item: "combo3", itemText: "Maxicombo Mix", price: "$329 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.cine)
+                                .cornerRadius(10)
+                                
+                        }
                     }
+                    
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(LinearGradient(gradient: Gradient(colors: [.teal, .pink]), startPoint: .topTrailing, endPoint: .bottomLeading))
+                
                 
             }
             
-            // Sección 'palomitas'
+            // SECCIÓN 'palomitas'
             if selectedProduct == 2 {
-                Text("Palomitas Disponibles")
-                    .font(.title).fontWeight(.bold)
-                
-                ScrollView(.horizontal){
-                    HStack{
-                        ZStack{
-                            ItemRowView(item: "pop1", itemText: "Palomitas Mantequilla", price: "$250 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
-                        
-                        ZStack{
-                            ItemRowView(item: "pop2", itemText: "Palomitas Cheetos", price: "$250 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
-                        
-                        ZStack{
-                            ItemRowView(item: "pop3", itemText: "Palomitas Fuego", price: "$250 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
+                VStack(alignment: .leading){
+                    Text("Palomitas Disponibles")
+                        .font(.title).fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                    
+                    ScrollView(.horizontal){
+                        HStack{
+                            ZStack{
+                                ItemRowView(item: "pop1", itemText: "Palomitas Mantequilla", price: "$250 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.gray)
+                                .cornerRadius(10)
+                            
+                            ZStack{
+                                ItemRowView(item: "pop2", itemText: "Palomitas Cheetos", price: "$250 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.gray)
+                                .cornerRadius(10)
+                            
+                            ZStack{
+                                ItemRowView(item: "pop3", itemText: "Palomitas Fuego", price: "$250 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.black)
+                                .cornerRadius(10)
+                        }
                     }
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(LinearGradient(gradient: Gradient(colors: [.purple, .blue]), startPoint: .topTrailing, endPoint: .bottomLeading))
+                
             }
             
             // Sección 'palomitas'
             if selectedProduct == 3 {
                 Text("Bebidas Disponibles")
                     .font(.title).fontWeight(.bold)
+                    .foregroundColor(Color.white)
                 
                 ScrollView(.horizontal){
                     HStack{
                         ZStack{
-                            ItemRowView(item: "drink1", itemText: "Fanta", price: "$60 MXN"){
+                            ItemRowView(item: "drink1", itemText: "Mundet", price: "$60 MXN"){
                                 compraSound(selectedIndex: 1)
                             }
                         }.background(Color.gray)
                             .cornerRadius(10)
                         
                         ZStack{
-                            ItemRowView(item: "drink2", itemText: "Mundet", price: "$60 MXN"){
+                            ItemRowView(item: "drink2", itemText: "ICEE", price: "$60 MXN"){
                                 compraSound(selectedIndex: 1)
                             }
                         }.background(Color.gray)
                             .cornerRadius(10)
                         
                         ZStack{
-                            ItemRowView(item: "drink3", itemText: "Sprite", price: "$60 MXN"){
+                            ItemRowView(item: "drink3", itemText: "Frappé", price: "$60 MXN"){
                                 compraSound(selectedIndex: 1)
                             }
                         }.background(Color.gray)
@@ -150,7 +166,7 @@ struct ProductView: View {
                 ScrollView(.horizontal){
                     HStack{
                         ZStack{
-                            ItemRowView(item: "food1", itemText: "Hot Dog", price: "$100 MXN"){
+                            ItemRowView(item: "food1", itemText: "Hot Dog Jumbo", price: "$66 MXN"){
                                 compraSound(selectedIndex: 1)
                             }
                         }.background(Color.gray)

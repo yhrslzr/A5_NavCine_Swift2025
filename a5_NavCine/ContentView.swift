@@ -14,10 +14,10 @@ struct ContentView: View {
                 VStack{
                     Text("Bienvenid@ a Dulcería Cinépolis")
                         .font(.title).fontWeight(.bold)
+                        
                     
                     // Fila 1
                     HStack {
-                        
                         // 'Combos'
                         NavigationLink(destination: ProductView(selectedProduct: 1)){
                             ZStack{

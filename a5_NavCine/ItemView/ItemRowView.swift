@@ -34,11 +34,18 @@ struct ItemRowView: View {
                     .frame(width: 150, height: 150)
                 
                 VStack(alignment: .leading){
-                    Text(itemText).font(.title)
+                    Text(itemText)
+                        .font(.title)
+                        .lineLimit(3)
+                        .multilineTextAlignment(.leading)
+                        .foregroundColor(Color.white)
                     Text(price).fontWeight(.semibold).font(.body)
+                        .foregroundColor(Color.white)
                 }
-            }.padding(10)
-                .foregroundStyle(Color(.black))
+            }
+            .padding(10)
+            .foregroundStyle(Color(.black))
+            .frame(width: 220, height: 320)
         }
         .alert(
             "Compra exitosa",
