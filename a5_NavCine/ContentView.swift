@@ -12,7 +12,8 @@ struct ContentView: View {
         NavigationStack{
             ScrollView {
                 VStack{
-                    Text("Bienvenid@ a Dulcería Cinépolis").font(.title)
+                    Text("Bienvenid@ a Dulcería Cinépolis")
+                        .font(.title).fontWeight(.bold)
                     
                     // Fila 1
                     HStack {

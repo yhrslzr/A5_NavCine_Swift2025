@@ -14,8 +14,13 @@ struct ItemRowView: View {
     var price: String
     @State var comprar: Bool = false
     
+    var onComprar: (() -> Void)? = nil
+    
     func comprarItem(){
         comprar.toggle()
+        if comprar {
+            onComprar?()
+        }
     }
     
     
@@ -25,7 +30,6 @@ struct ItemRowView: View {
             VStack {
                 Image(item)
                     .resizable()
-                    
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 150, height: 150)
                 
@@ -41,7 +45,7 @@ struct ItemRowView: View {
             isPresented: $comprar
         ) {
             Button("OK") {
-                comprarItem()
+                comprar = false
             }
         } message: {
             Text("Has comprado \(itemText)")

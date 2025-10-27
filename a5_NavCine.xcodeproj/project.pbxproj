@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		35A027A22E909FA800A101EB /* a5_NavCine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = a5_NavCine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35A027A22E909FA800A101EB /* a5_NavCine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = a5_NavCine.app; path = "/Users/yahirsalazar/Documents/iOS_YSOSwift2025/A5_NavCine_Swift2025/build/Debug-iphoneos/a5_NavCine.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,16 +33,7 @@
 			isa = PBXGroup;
 			children = (
 				35A027A42E909FA800A101EB /* a5_NavCine */,
-				35A027A32E909FA800A101EB /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		35A027A32E909FA800A101EB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				35A027A22E909FA800A101EB /* a5_NavCine.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,7 +86,7 @@
 			mainGroup = 35A027992E909FA800A101EB;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 35A027A32E909FA800A101EB /* Products */;
+			productRefGroup = 35A027992E909FA800A101EB;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
