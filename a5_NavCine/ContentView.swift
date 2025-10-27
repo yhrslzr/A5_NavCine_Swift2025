@@ -13,7 +13,7 @@ struct ContentView: View {
         NavigationStack{
             ScrollView {
                 VStack{
-                    Text("Bienvenid@ a Dulcería Cinépolis")
+                    Text("Bienvenid@ a Cinépolis")
                         .font(.title).fontWeight(.bold)
                         
                     

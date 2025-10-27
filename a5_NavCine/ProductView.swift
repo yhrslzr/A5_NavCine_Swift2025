@@ -9,7 +9,7 @@ import SwiftUI
 import AVFAudio
 
 struct ProductView: View {
-    @State var selectedProduct: Int?
+    @State var selectedProduct: Int? = 1
     @State private var player: AVAudioPlayer? = nil
     
     
