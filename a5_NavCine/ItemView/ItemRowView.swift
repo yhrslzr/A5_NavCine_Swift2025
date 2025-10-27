@@ -12,6 +12,9 @@ struct ItemRowView: View {
     var item: String
     var itemText: String
     var price: String
+    
+    var bgColor: Color = Color.cine
+    
     @State var comprar: Bool = false
     
     var onComprar: (() -> Void)? = nil
@@ -46,6 +49,8 @@ struct ItemRowView: View {
             .padding(10)
             .foregroundStyle(Color(.black))
             .frame(width: 220, height: 320)
+            .background(bgColor)
+            .cornerRadius(10)
         }
         .alert(
             "Compra exitosa",
@@ -61,5 +66,5 @@ struct ItemRowView: View {
 }
 
 #Preview {
-    ItemRowView(item: "", itemText: "", price: "")
+    ItemRowView(item: "combo1", itemText: "Combo Nachos en Pareja", price: "$280 MXN")
 }
