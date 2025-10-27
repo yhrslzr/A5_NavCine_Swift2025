@@ -83,6 +83,7 @@ struct ProductView: View {
                     }
                     
                 }
+                .padding(20)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(LinearGradient(gradient: Gradient(colors: [.teal, .pink]), startPoint: .topTrailing, endPoint: .bottomLeading))
                 
@@ -102,25 +103,26 @@ struct ProductView: View {
                                 ItemRowView(item: "pop1", itemText: "Palomitas Mantequilla", price: "$250 MXN"){
                                     compraSound(selectedIndex: 1)
                                 }
-                            }.background(Color.gray)
+                            }.background(Color.cine)
                                 .cornerRadius(10)
                             
                             ZStack{
                                 ItemRowView(item: "pop2", itemText: "Palomitas Cheetos", price: "$250 MXN"){
                                     compraSound(selectedIndex: 1)
                                 }
-                            }.background(Color.gray)
+                            }.background(Color.cine)
                                 .cornerRadius(10)
                             
                             ZStack{
                                 ItemRowView(item: "pop3", itemText: "Palomitas Fuego", price: "$250 MXN"){
                                     compraSound(selectedIndex: 1)
                                 }
-                            }.background(Color.black)
+                            }.background(Color.cine)
                                 .cornerRadius(10)
                         }
                     }
                 }
+                .padding(20)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(LinearGradient(gradient: Gradient(colors: [.purple, .blue]), startPoint: .topTrailing, endPoint: .bottomLeading))
                 
@@ -128,128 +130,149 @@ struct ProductView: View {
             
             // Sección 'palomitas'
             if selectedProduct == 3 {
-                Text("Bebidas Disponibles")
-                    .font(.title).fontWeight(.bold)
-                    .foregroundColor(Color.white)
-                
-                ScrollView(.horizontal){
-                    HStack{
-                        ZStack{
-                            ItemRowView(item: "drink1", itemText: "Mundet", price: "$60 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
-                        
-                        ZStack{
-                            ItemRowView(item: "drink2", itemText: "ICEE", price: "$60 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
-                        
-                        ZStack{
-                            ItemRowView(item: "drink3", itemText: "Frappé", price: "$60 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
+                VStack(alignment: .leading){
+                    Text("Bebidas Disponibles")
+                        .font(.title).fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                    
+                    ScrollView(.horizontal){
+                        HStack{
+                            ZStack{
+                                ItemRowView(item: "drink1", itemText: "Mundet", price: "$60 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.cine)
+                                .cornerRadius(10)
+                            
+                            ZStack{
+                                ItemRowView(item: "drink2", itemText: "ICEE", price: "$60 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.cine)
+                                .cornerRadius(10)
+                            
+                            ZStack{
+                                ItemRowView(item: "drink3", itemText: "Frappé", price: "$60 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.cine)
+                                .cornerRadius(10)
+                        }
                     }
                 }
-                
+                .padding(20)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(LinearGradient(gradient: Gradient(colors: [.blue, .cyan]), startPoint: .topTrailing, endPoint: .bottomLeading))
             }
             
             if selectedProduct == 4 {
-                Text("Alimentos Disponibles")
-                    .font(.title).fontWeight(.bold)
                 
-                ScrollView(.horizontal){
-                    HStack{
-                        ZStack{
-                            ItemRowView(item: "food1", itemText: "Hot Dog Jumbo", price: "$66 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
-                        
-                        ZStack{
-                            ItemRowView(item: "food2", itemText: "Quesadillas Guacamole", price: "$179 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
-                        
-                        ZStack{
-                            ItemRowView(item: "food3", itemText: "A", price: "$19 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
+                VStack(alignment: .leading){
+                    Text("Alimentos Disponibles")
+                        .font(.title).fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                    
+                    ScrollView(.horizontal){
+                        HStack{
+                            ZStack{
+                                ItemRowView(item: "food1", itemText: "Hot Dog Jumbo", price: "$66 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.cine)
+                                .cornerRadius(10)
+                            
+                            ZStack{
+                                ItemRowView(item: "food2", itemText: "Quesadillas Guacamole", price: "$179 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.cine)
+                                .cornerRadius(10)
+                            
+                            ZStack{
+                                ItemRowView(item: "food3", itemText: "A", price: "$19 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.cine)
+                                .cornerRadius(10)
+                        }
                     }
                 }
-                
+                .padding(20)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(LinearGradient(gradient: Gradient(colors: [.orange, .yellow]), startPoint: .topTrailing, endPoint: .bottomLeading))
             }
             
             if selectedProduct == 5 {
-                Text("Snacks Disponibles")
-                    .font(.title).fontWeight(.bold)
                 
-                ScrollView(.horizontal){
-                    HStack{
-                        ZStack{
-                            ItemRowView(item: "snack1", itemText: "A", price: "$0 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
-                        
-                        ZStack{
-                            ItemRowView(item: "snack2", itemText: "A", price: "$0 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
-                        
-                        ZStack{
-                            ItemRowView(item: "snack3", itemText: "A", price: "$0 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
+                VStack(alignment: .leading){
+                    Text("Snacks Disponibles")
+                        .font(.title).fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                    
+                    ScrollView(.horizontal){
+                        HStack{
+                            ZStack{
+                                ItemRowView(item: "snack1", itemText: "A", price: "$0 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.cine)
+                                .cornerRadius(10)
+                            
+                            ZStack{
+                                ItemRowView(item: "snack2", itemText: "A", price: "$0 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.cine)
+                                .cornerRadius(10)
+                            
+                            ZStack{
+                                ItemRowView(item: "snack3", itemText: "A", price: "$0 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.cine)
+                                .cornerRadius(10)
+                        }
                     }
                 }
-                
+                .padding(20)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(LinearGradient(gradient: Gradient(colors: [.mint, .green]), startPoint: .topTrailing, endPoint: .bottomLeading))
             }
             
             if selectedProduct == 6 {
-                Text("Postres Disponibles")
-                    .font(.title).fontWeight(.bold)
-                
-                ScrollView(.horizontal){
-                    HStack{
-                        ZStack{
-                            ItemRowView(item: "sweet1", itemText: "A", price: "$0 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
-                        
-                        ZStack{
-                            ItemRowView(item: "sweet2", itemText: "A", price: "$0 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
-                        
-                        ZStack{
-                            ItemRowView(item: "sweet3", itemText: "A", price: "$0 MXN"){
-                                compraSound(selectedIndex: 1)
-                            }
-                        }.background(Color.gray)
-                            .cornerRadius(10)
+                VStack(alignment: .leading){
+                    Text("Postres Disponibles")
+                        .font(.title).fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                    
+                    ScrollView(.horizontal){
+                        HStack{
+                            ZStack{
+                                ItemRowView(item: "sweet1", itemText: "A", price: "$0 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.cine)
+                                .cornerRadius(10)
+                            
+                            ZStack{
+                                ItemRowView(item: "sweet2", itemText: "A", price: "$0 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.cine)
+                                .cornerRadius(10)
+                            
+                            ZStack{
+                                ItemRowView(item: "sweet3", itemText: "A", price: "$0 MXN"){
+                                    compraSound(selectedIndex: 1)
+                                }
+                            }.background(Color.cine)
+                                .cornerRadius(10)
+                        }
                     }
                 }
-                
+                .padding(20)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(LinearGradient(gradient: Gradient(colors: [.purple, .pink]), startPoint: .topTrailing, endPoint: .bottomLeading))
             }
             
         }

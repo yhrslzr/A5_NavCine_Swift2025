@@ -18,6 +18,7 @@ struct ContentView: View {
                     
                     // Fila 1
                     HStack {
+                        
                         // 'Combos'
                         NavigationLink(destination: ProductView(selectedProduct: 1)){
                             ZStack{
@@ -50,7 +51,8 @@ struct ContentView: View {
                         NavigationLink(destination: ProductView(selectedProduct: 4)){
                             ZStack{
                                 ItemGridView(item: "alimentos", itemText: "Alimentos")
-                            }.background(LinearGradient(gradient: Gradient(colors: [.orange, .yellow]), startPoint: .topTrailing, endPoint: .bottomLeading)).cornerRadius(10)
+                            }.background(LinearGradient(gradient: Gradient(colors: [.orange, .yellow]), startPoint: .topTrailing, endPoint: .bottomLeading))
+                                .cornerRadius(10)
                         }
                     }
                     
@@ -59,13 +61,16 @@ struct ContentView: View {
                         NavigationLink(destination: ProductView(selectedProduct: 5)){
                             ZStack{
                                 ItemGridView(item: "snacks", itemText: "Snacks")
-                            }.background(LinearGradient(gradient: Gradient(colors: [.mint, .green]), startPoint: .topTrailing, endPoint: .bottomLeading)).cornerRadius(10)
+                            }
+                            .background(LinearGradient(gradient: Gradient(colors: [.mint, .green]), startPoint: .topTrailing, endPoint: .bottomLeading))
+                                .cornerRadius(10)
                         }
                         
                         NavigationLink(destination: ProductView(selectedProduct: 6)){
                             ZStack{
                                 ItemGridView(item: "postres", itemText: "Postres")
-                            }.background(LinearGradient(gradient: Gradient(colors: [.purple, .pink]), startPoint: .topTrailing, endPoint: .bottomLeading)).cornerRadius(10)
+                            }.background(LinearGradient(gradient: Gradient(colors: [.purple, .pink]), startPoint: .topTrailing, endPoint: .bottomLeading))
+                                .cornerRadius(10)
                         }
                     }
                     
